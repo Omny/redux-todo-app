@@ -1,6 +1,6 @@
-Simple To-Do React App. It uses Redux/Toolkit.
+# Simple To-Do React App. It uses Redux/Toolkit.
 
-# Getting Started with Create React App
+I created it for testing purposes.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

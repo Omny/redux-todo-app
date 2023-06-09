@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { add, remove, doneToggle } from "./store/todo";
+import { add, remove, doneToggle } from "./slices/todo";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {

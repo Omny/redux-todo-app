@@ -15,13 +15,13 @@ const todoSlice = createSlice({
   // тут это строка с названием новой задачи в add или id для удаления или пометки выполнения
   reducers: {
     add(items, action) {
-      const item = {
+      const newItem = {
         id: 1 + Math.max(0, ...items.map((item) => item.id)),
         content: action.payload,
         done: false,
       };
       console.log(current(items));
-      return [...items, item];
+      return [...items, newItem];
     },
 
     remove(items, action) {
@@ -29,13 +29,13 @@ const todoSlice = createSlice({
     },
 
     doneToggle(items, action) {
-      const item = items.find((item) => item.id === action.payload)
+      const currentItem = items.find((item) => item.id === action.payload);
 
-      if (item) {
-        item.done = !item.done;
+      if (currentItem) {
+        currentItem.done = !currentItem.done;
       }
-    }
-  }
+    },
+  },
 });
 
 export const { add, remove, doneToggle } = todoSlice.actions

@@ -6,6 +6,7 @@ function App() {
   // С помощью хука useSelector получим доступ к состоянию хранилища (store)
   // и извлечем из него необходимые данные.
   const items = useSelector((state) => state.todo);
+  
   // Хук useDispatch предоставляет функцию dispatch,
   // с помощью неё отправляем действия для изменения состояния.
   const dispatch = useDispatch();

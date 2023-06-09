@@ -9,6 +9,7 @@ const getInitialState = () => [
 
 const todoSlice = createSlice({
   name: 'todo',
+  // тут добавим начальные данные
   initialState: getInitialState(),
   // action.payload это, то, что передаётся в функцию,
   // тут это строка с названием новой задачи в add или id для удаления или пометки выполнения

@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { add, remove, doneToggle } from "./store/todo";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  // С помощью хука useSelector получим доступ к состоянию хранилища (store)
+  // и извлечем из него необходимые данные.
   const items = useSelector((state) => state.todo);
+  // Хук useDispatch предоставляет функцию dispatch,
+  // с помощью неё отправляем действия для изменения состояния.
   const dispatch = useDispatch();
 
+  // Это изначально пустая строка с названием новой задачи
   const [value, setValue] = useState('');
 
+  // При клике на кнопку вызовем функция dispatch(doneToggle()), 
+  // которая отправит действие doneToggle в редьюсер и там изменит состояние
   return (
     <div className="App">
       <input value={value} onChange={(e) => setValue(e.target.value)} />

@@ -7,6 +7,9 @@ import './styles.css';
 import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Провайдер прокидывает store (хранилище)
+// потом с ним можно будет работать в любом вложенном элементе
 root.render(
   <React.StrictMode>
     <Provider store={store}>

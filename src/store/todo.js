@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const getInitialState = () => [
   { id: 1, content: 'Make homework', done: false },
@@ -17,7 +17,7 @@ const todoSlice = createSlice({
         content: action.payload,
         done: false,
       };
-
+      console.log(current(items));
       return [...items, item];
     },
 
